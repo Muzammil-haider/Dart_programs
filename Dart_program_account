@@ -20,7 +20,7 @@ class BankAccount{
   }
   display(){
     print("your Account number is  ${account_number}");
-     print("your Account Title was  ${account_type}");
+     print("your Account type was  ${account_type}");
      print("Interest rate was  ${interest_rate}");
      print("your balance was ${balance}");
   }
@@ -42,6 +42,9 @@ class Student{
     }
   }
 display_courses(){
+  print("Student name $name");
+  print("Student Id $id");
+  print("student attempted courses: ");
   for(int i =0;i<courses.length;i++){
     print("${courses[i]}");
   }
@@ -60,7 +63,7 @@ void main() {
   acc2.withdraw(300000);
   acc2.add_interest();
   acc2.display();
-  Student std1=new Student("muzammil","B22110106079");
+  Student std1=new Student("Zain Haider","B22110106076");
   std1.add_course("math");
   std1.add_course("physics");
   std1.add_course("Chemistry");
@@ -68,5 +71,14 @@ void main() {
   std1.add_course("sindhi");
   std1.drop_courses("sindhi");
   std1.display_courses();
+  Student std2=new Student("Muzammil Haider","B22110106079");
+  std2.add_course("Differential equation");
+  std2.add_course("Linear Algebra");
+  std2.add_course("Data Structue");
+  std2.add_course("Automata");
+  std2.add_course("Cld and Dld");
+  std2.drop_courses("Cld and Dld");
+  std2.display_courses();
   
 }
+
