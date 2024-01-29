@@ -82,3 +82,33 @@ void main() {
   
 }
 
+
+
+ Code Run:
+
+your Account number is  99095684245
+your Account type was  current
+Interest rate was  1.2
+your balance was 8096
+your Account number is  99095468455
+your Account type was  saving
+Interest rate was  5.5
+your balance was 844000
+Student name Zain Haider
+Student Id B22110106076
+student attempted courses: 
+urdu
+islamiat
+math
+physics
+Chemistry
+english
+Student name Muzammil Haider
+Student Id B22110106079
+student attempted courses: 
+urdu
+islamiat
+Differential equation
+Linear Algebra
+Data Structue
+Automata
