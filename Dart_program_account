@@ -1,0 +1,72 @@
+class BankAccount{
+  int account_number;
+  double balance;
+  String account_type;
+  double interest_rate;
+  BankAccount(int this.account_number,double this.balance,String this.account_type,double this.interest_rate);
+  deposit(double a){
+    balance=balance+a;    
+  }
+  withdraw(double x){
+    if(x<=balance){
+      balance=balance -x;
+    }
+    else{
+      print("insufficient balance");
+    }
+  }
+  add_interest(){
+    balance=balance+(interest_rate*balance/100);
+  }
+  display(){
+    print("your Account number is  ${account_number}");
+     print("your Account Title was  ${account_type}");
+     print("Interest rate was  ${interest_rate}");
+     print("your balance was ${balance}");
+  }
+  
+}
+class Student{
+  String name;
+  String id;
+ List<String> courses=["urdu","islamiat"];
+  Student(String this.name,String this.id);
+  add_course(String x){
+    courses.add(x);
+  }
+  drop_courses(String y){
+    for (int i =0;i<courses.length;i++){
+      if(courses[i]==y){
+        courses.remove(courses[i]);
+      }
+    }
+  }
+display_courses(){
+  for(int i =0;i<courses.length;i++){
+    print("${courses[i]}");
+  }
+}
+}
+
+
+void main() {
+  BankAccount acc1 =new BankAccount(99095684245,5000.0,"current",1.2);
+  BankAccount acc2 =new BankAccount(99095468455,600000.0,"saving",5.5);
+  acc1.deposit(5000);
+  acc1.withdraw(2000);
+  acc1.add_interest();
+  acc1.display();
+  acc2.deposit(500000);
+  acc2.withdraw(300000);
+  acc2.add_interest();
+  acc2.display();
+  Student std1=new Student("muzammil","B22110106079");
+  std1.add_course("math");
+  std1.add_course("physics");
+  std1.add_course("Chemistry");
+  std1.add_course("english");
+  std1.add_course("sindhi");
+  std1.drop_courses("sindhi");
+  std1.display_courses();
+  
+}
